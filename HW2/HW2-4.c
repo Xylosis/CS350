@@ -29,6 +29,10 @@ int main(){
     /*Returns -1 > 0U because -1 becomes casted to unsigned, so instead of comparing -1 & 0, its actually comparing 65535 (Unsigned Max, since -1 == UNSIGNED MAX == FFFF ) */
     printf(" %d\t%d\t%s\t\t%s\n", INT_MAX, INT_MIN, ( INT_MAX > INT_MIN ? ">" : "<"), "signed");
     printf(" %uU\t%d\t%s\t\t%s\n", INT_MAX, INT_MIN, castingUnsignedSigned(INT_MAX, INT_MIN), "unsigned");
+    printf(" %d\t\t%d\t\t%s\t\t%s\n", -1, -2, (-1 > -2 ? ">" : "<"), "signed");
+    printf("(unsigned)%d\t%d\t\t%s\t\t%s\n", -1, -2, castingUnsignedSigned(-1, -2), "unsigned");
+    printf(" %d\t%uU\t%s\t\t%s\n", INT_MAX, INT_MIN, castingSignedUnsigned(INT_MAX, INT_MIN), "unsigned");
+    printf(" %d\t(int)%uU\t%s\t\t%s\n", INT_MAX, INT_MIN, (INT_MAX > (int)((unsigned) INT_MAX + 1U) ? ">" : "<"), "signed");
 
     return 0;
 }
