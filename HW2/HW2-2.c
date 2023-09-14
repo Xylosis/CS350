@@ -13,7 +13,7 @@ int main() {
     printf(" \t%d\t%d\t%d\t%ld\n\n", CHAR_MIN, SHRT_MIN, INT_MIN, LONG_MIN);
     printf(" %s\t%#X\t%#X\t%#X\t%#lX\n", "TMax", CHAR_MAX, SHRT_MAX, INT_MAX, LONG_MAX);
     printf(" \t%d\t%d\t%d\t%ld\n\n", CHAR_MAX, SHRT_MAX, INT_MAX, LONG_MAX);
-    printf(" %d\t%#hhX\t%#hX\t%#X\t%#lX\n\n", CHAR_MIN + CHAR_MAX, SHRT_MIN + SHRT_MAX, INT_MIN + INT_MAX, (long) - 1);
+    printf(" %d\t%#hhX\t%#hX\t%#X\t%#lX\n\n", CHAR_MIN + CHAR_MAX ,CHAR_MIN + CHAR_MAX, SHRT_MIN + SHRT_MAX, INT_MIN + INT_MAX, (LONG_MIN + LONG_MAX));
     printf(" %d\t0X", 0);
     for(int i = 0; i < (int) (CHAR_BIT / 4); i++){
         printf("0");
