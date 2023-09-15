@@ -66,13 +66,13 @@ int main() {
 
     printf("\t\t Normal Addition\n-----------------------------------------------\n");
     printf("%d + %d = %d\n", a, b, a + b);
-    printf("%d + %d = %ld\n", c, x, (long) (c + x));
-    printf("%d + %d = %ld\n", b, y, (long) (b + y));
+    printf("%d + %d (INT_MIN + 1) = %ld\n", c, x, (long) (c + x));
+    printf("%d + %d (INT_MAX - 1) = %ld\n", b, y, (long) (b + y));
 
     printf("\n\t\tSaturating Addition\n-----------------------------------------------\n");
     printf("%d + %d = %d\n", a, b, saturating_add(a, b));
-    printf("%d + %d = %d\n", c, x, saturating_add(c, x));
-    printf("%d + %d = %d\n", b, y, saturating_add(b, y));
+    printf("%d + %d (INT_MIN + 1) = %d\n", c, x, saturating_add(c, x));
+    printf("%d + %d (INT_MAX - 1) = %d\n", b, y, saturating_add(b, y));
 
     return 0;
 }
