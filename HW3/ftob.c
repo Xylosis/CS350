@@ -47,7 +47,7 @@ void print_float(char *s, int n) {
 
   for(i; i < n; i++) {
     printf("%d", s[i]);
-    if(i == 8)
+    if(i == EXP_32)
       printf(" ");
   }
   printf("\n");
