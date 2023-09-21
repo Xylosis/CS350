@@ -24,12 +24,7 @@ float strToDecimal(char s[LEN]) {
             uInt = (uInt | 1 << (31 - i));
         }
     }
-    // mask = 1 << 31;
-    // for(int i = 0; i < LEN-1; i++) {
-    //     printf("%u", (uInt & mask)!=0?1:0);
-    //     mask = mask >> 1;
-    // }
-
+    
     float f = *((float *) &uInt);
     return f;
 }
@@ -40,7 +35,7 @@ int main(int argc, char **argv) {
   char s[LEN] = "001111110100000000000000000000";
 
   printf("float value = %f\n", strToDecimal(s));
-  
+
   printf("float value = %f\n", strToDecimal("00111110000000000000000000000000"));
 
   return 0;
