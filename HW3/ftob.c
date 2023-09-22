@@ -52,5 +52,4 @@ void print_float(char *s, int n) {
   }
   printf("\n");
 }
-
 /* End of ftob.c */

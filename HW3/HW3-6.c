@@ -29,7 +29,6 @@ float strToDecimal(char s[LEN]) {
     return f;
 }
 
-
 int main(int argc, char **argv) {
   int n=LEN;
   char s[LEN] = "001111110100000000000000000000";
@@ -40,4 +39,3 @@ int main(int argc, char **argv) {
 
   return 0;
 }
-
